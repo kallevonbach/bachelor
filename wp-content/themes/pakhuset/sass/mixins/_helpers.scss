@@ -1,0 +1,6 @@
+
+@mixin px($custompx){
+  @media screen and (max-width: $custompx) {
+    @content;
+  }
+}

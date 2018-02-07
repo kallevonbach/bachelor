@@ -1,0 +1,44 @@
+.container {
+	max-width: $container-lg;
+	margin-left: auto;
+	margin-right: auto;
+	@include px(1200px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.row-wrapper {
+	min-height: 1px;
+	display: flex;
+	justify-content: space-between;
+}
+.row-wrapper-left {
+	min-height: 1px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+
+	.col-#{$i} {
+		width: 100% / 12 * $i - $columns__margin;
+		min-height: 1px;
+	}
+
+	.col-margin-#{$i} {
+		width: 100% / 12 * $i - $columns__margin;
+		min-height: 1px;
+		margin-right: $columns__margin;
+	}
+
+	.col-full-#{$i} {
+		width: 100% / 12 * $i;
+		min-height: 1px;
+	}
+}
+
+.padding {
+	padding-top: $padding-top;
+	padding-bottom: $padding-bottom;
+}
